@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Today" id="AgC-eL-Hgc" customClass="TodayInterfaceController" customModule="WatchMe_WatchKit_App_Extension">
+                    <items>
+                        <table alignment="left" id="sRj-YZ-fxa">
+                            <items>
+                                <tableRow identifier="habit" id="mOz-hz-JA3" customClass="HabitRow" customModule="WatchMe_WatchKit_App_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="r0a-zj-md3">
+                                        <items>
+                                            <label alignment="left" text="Name" id="OSE-T3-EZB">
+                                                <fontDescription key="font" type="system" pointSize="17"/>
+                                            </label>
+                                            <label alignment="left" text="Rate" id="1XC-7q-wZu">
+                                                <fontDescription key="font" type="system" pointSize="13"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" name="Brand"/>
+                                        <edgeInsets key="margins" left="10" right="10" top="5" bottom="5"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="OSE-T3-EZB" id="vb1-xt-LK4"/>
+                                        <outlet property="rateLabel" destination="1XC-7q-wZu" id="AoW-pK-Jtx"/>
+                                        <segue destination="JOl-dP-sB9" kind="modal" identifier="toHabit" id="Ryy-lj-UoA"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="sRj-YZ-fxa" id="NK7-sJ-qLA"/>
+                        <segue destination="BLF-7R-vpc" kind="relationship" relationship="nextPage" id="ZrI-Ib-aqx"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="42" y="31"/>
+        </scene>
+        <!--Summary-->
+        <scene sceneID="ovN-55-xhm">
+            <objects>
+                <controller title="Summary" id="BLF-7R-vpc" customClass="SummaryInterfaceController" customModule="WatchMe_WatchKit_App_Extension">
+                    <items>
+                        <label alignment="center" text="0%" id="K4R-Ga-Qi1">
+                            <fontDescription key="font" type="boldSystem" pointSize="32"/>
+                        </label>
+                        <label alignment="center" textAlignment="center" numberOfLines="0" id="ntc-y5-Fic">
+                            <string key="text">COMPLETION
+RATE</string>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="13"/>
+                        </label>
+                        <label alignment="center" text="0" id="jsY-0h-CQv">
+                            <color key="textColor" name="Brand"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="17"/>
+                        </label>
+                        <label alignment="center" text="COMPLETED" id="yZP-fu-lVm">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="13"/>
+                        </label>
+                        <label alignment="center" text="0" id="sDT-wm-hN7">
+                            <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="17"/>
+                        </label>
+                        <label alignment="center" text="STARTED" id="Myc-0W-X6L">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="13"/>
+                        </label>
+                        <label alignment="center" text="0" id="3mI-47-Tfd">
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="17"/>
+                        </label>
+                        <label alignment="center" text="NOT DONE" id="UWn-8h-gYy">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="13"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="completedLabel" destination="jsY-0h-CQv" id="fVs-AH-ivU"/>
+                        <outlet property="completionRateLabel" destination="K4R-Ga-Qi1" id="S1v-ty-c7Q"/>
+                        <outlet property="notDoneLabel" destination="3mI-47-Tfd" id="HIe-T3-301"/>
+                        <outlet property="startedLabel" destination="sDT-wm-hN7" id="Xed-cU-Kj0"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="326" y="31"/>
+        </scene>
+        <!--Habit Interface Controller-->
+        <scene sceneID="LTS-xc-dJA">
+            <objects>
+                <controller id="JOl-dP-sB9" customClass="HabitInterfaceController" customModule="WatchMe_WatchKit_App_Extension">
+                    <items>
+                        <label width="45" alignment="center" textAlignment="center" numberOfLines="0" id="xD1-bZ-Fkq">
+                            <string key="text">Long
+Name</string>
+                            <fontDescription key="font" type="system" pointSize="17"/>
+                        </label>
+                        <label alignment="center" text="0/0" id="F1V-xf-ocj">
+                            <fontDescription key="font" type="system" pointSize="13"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Done" id="jit-2p-mfD">
+                            <connections>
+                                <action selector="doneButtonDidPress" destination="JOl-dP-sB9" id="19Q-FC-9q1"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Undo" id="Opo-gb-XaC">
+                            <connections>
+                                <action selector="undoButtonDidPress" destination="JOl-dP-sB9" id="4co-ka-PHD"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="doneButton" destination="jit-2p-mfD" id="jBz-Zg-jeP"/>
+                        <outlet property="nameLabel" destination="xD1-bZ-Fkq" id="lIg-ul-aai"/>
+                        <outlet property="rateLabel" destination="F1V-xf-ocj" id="Rll-qy-d6D"/>
+                        <outlet property="undoButton" destination="Opo-gb-XaC" id="9yZ-f7-uEs"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="326" y="449"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Brand">
+            <color red="0.0" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+</document>
