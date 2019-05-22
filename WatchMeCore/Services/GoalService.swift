@@ -11,8 +11,8 @@ import Foundation
 private let activitiesKey = "activities"
 private let activitiesDateKey = "activitiesDate"
 
-struct ActivityService {
-    static var todayActivities: [Activity] {
+public struct ActivityService {
+    public static var todayActivities: [Activity] {
         guard let data = Storage.defaults.data(forKey: activitiesKey) else {
             return []
         }
@@ -20,7 +20,7 @@ struct ActivityService {
         return try! JSONDecoder().decode([Activity].self, from: data)
     }
 
-    static func prepareActivities() {
+    public static func prepareActivities() {
         let timestamp = Storage.defaults.double(forKey: activitiesDateKey)
         let date = Date(timeIntervalSince1970: timestamp)
         if !Calendar.current.isDateInToday(date) {
@@ -32,24 +32,24 @@ struct ActivityService {
         }
     }
 
-    static func addActivity(forHabitWithId id: UUID) {
+    public static func addActivity(forHabitWithId id: UUID) {
         let activity = Activity(habitId: id)
         var activities = todayActivities
         activities.insert(activity, at: 0)
         setActivities(activities)
     }
 
-    static func deleteActivity(forHabitWithId id: UUID) {
+    public static func deleteActivity(forHabitWithId id: UUID) {
         var activities = todayActivities
         activities.removeAll { $0.habitId == id }
         setActivities(activities)
     }
 
-    static func doneActivity(forHabitWithId id: UUID) {
+    public static func doneActivity(forHabitWithId id: UUID) {
         replaceActivity(forHabitWithId: id, doneDelta: 1)
     }
 
-    static func undoActivity(forHabitWithId id: UUID) {
+    public static func undoActivity(forHabitWithId id: UUID) {
         replaceActivity(forHabitWithId: id, doneDelta: -1)
     }
 

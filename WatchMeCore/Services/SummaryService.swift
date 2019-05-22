@@ -8,12 +8,14 @@
 
 import Foundation
 
-struct SummaryService {
-    static func summary(withHabits habits: [Habit], activities: [Activity]) -> Summary {
+public struct SummaryService {
+    public static var todaySummary: Summary {
+        let habits = HabitService.todayHabits
         if habits.isEmpty {
             return Summary()
         }
 
+        let activities = ActivityService.todayActivities
         let goal = habits.reduce(0) { $0 + $1.goal }
         let done = activities.reduce(0) { $0 + $1.done }
         let completionRate = rate(withGoal: goal, done: done)
@@ -36,7 +38,7 @@ struct SummaryService {
         return Summary(completionRate: completionRate, completed: completed, started: started, notDone: notDone)
     }
 
-    static func rate(withGoal goal: Int, done: Int) -> Int {
+    public static func rate(withGoal goal: Int, done: Int) -> Int {
         return (Int(Double(100) / Double(goal) * Double(done)))
     }
 }

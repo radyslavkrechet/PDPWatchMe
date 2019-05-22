@@ -14,20 +14,27 @@ class SummaryInterfaceController: WKInterfaceController {
     @IBOutlet weak var startedLabel: WKInterfaceLabel!
     @IBOutlet weak var notDoneLabel: WKInterfaceLabel!
 
+    private var summary: Summary!
+
     // MARK: - Interface Controller Lifecycle
 
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
+    override func didAppear() {
+        super.didAppear()
 
+        loadData()
         populateViewsWithSummary()
     }
 
     // MARK: - Setup
 
+    private func loadData() {
+        summary = SummaryService.todaySummary
+    }
+
     private func populateViewsWithSummary() {
-        completionRateLabel.setText("100%")
-        completedLabel.setText("1")
-        startedLabel.setText("1")
-        notDoneLabel.setText("1")
+        completionRateLabel.setText("\(summary.completionRate)%")
+        completedLabel.setText(String(summary.completed))
+        startedLabel.setText(String(summary.started))
+        notDoneLabel.setText(String(summary.notDone))
     }
 }

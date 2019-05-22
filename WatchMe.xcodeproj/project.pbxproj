@@ -27,14 +27,31 @@
 		0B2B0CC92291736E00477154 /* SummaryInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0CC82291736E00477154 /* SummaryInterfaceController.swift */; };
 		0B2B0CCB229173B500477154 /* HabitInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0CCA229173B500477154 /* HabitInterfaceController.swift */; };
 		0B2B0CD7229174FF00477154 /* HabitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0CD6229174FF00477154 /* HabitRow.swift */; };
-		0BD1FD15229465A80065A427 /* WeekdayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD14229465A80065A427 /* WeekdayState.swift */; };
-		0BD1FD17229465C90065A427 /* HabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD16229465C90065A427 /* HabitService.swift */; };
-		0BD1FD192294669A0065A427 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD182294669A0065A427 /* Habit.swift */; };
-		0BD1FD1C229467740065A427 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1B229467740065A427 /* Storage.swift */; };
-		0BD1FD20229473FF0065A427 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1F229473FF0065A427 /* Activity.swift */; };
-		0BD1FD222294752B0065A427 /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* GoalService.swift */; };
-		0BD1FD25229497410065A427 /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD24229497410065A427 /* SummaryService.swift */; };
-		0BD1FD27229498710065A427 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD26229498710065A427 /* Summary.swift */; };
+		0BAD6572229520BE0083FA7E /* WatchMeCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BAD6570229520BE0083FA7E /* WatchMeCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BAD6583229521230083FA7E /* WeekdayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD14229465A80065A427 /* WeekdayState.swift */; };
+		0BAD6584229521230083FA7E /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD182294669A0065A427 /* Habit.swift */; };
+		0BAD6585229521230083FA7E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1F229473FF0065A427 /* Activity.swift */; };
+		0BAD6586229521230083FA7E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD26229498710065A427 /* Summary.swift */; };
+		0BAD6587229521230083FA7E /* HabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD16229465C90065A427 /* HabitService.swift */; };
+		0BAD6588229521230083FA7E /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* GoalService.swift */; };
+		0BAD6589229521230083FA7E /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD24229497410065A427 /* SummaryService.swift */; };
+		0BAD658A229521230083FA7E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1B229467740065A427 /* Storage.swift */; };
+		0BAD65932295257E0083FA7E /* WeekdayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD14229465A80065A427 /* WeekdayState.swift */; };
+		0BAD65942295257E0083FA7E /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD182294669A0065A427 /* Habit.swift */; };
+		0BAD65952295257E0083FA7E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1F229473FF0065A427 /* Activity.swift */; };
+		0BAD65962295257E0083FA7E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD26229498710065A427 /* Summary.swift */; };
+		0BAD65972295257E0083FA7E /* HabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD16229465C90065A427 /* HabitService.swift */; };
+		0BAD65982295257E0083FA7E /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* GoalService.swift */; };
+		0BAD65992295257F0083FA7E /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD24229497410065A427 /* SummaryService.swift */; };
+		0BAD659A2295257F0083FA7E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1B229467740065A427 /* Storage.swift */; };
+		0BAD659B229525800083FA7E /* WeekdayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD14229465A80065A427 /* WeekdayState.swift */; };
+		0BAD659C229525800083FA7E /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD182294669A0065A427 /* Habit.swift */; };
+		0BAD659D229525800083FA7E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1F229473FF0065A427 /* Activity.swift */; };
+		0BAD659E229525800083FA7E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD26229498710065A427 /* Summary.swift */; };
+		0BAD659F229525800083FA7E /* HabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD16229465C90065A427 /* HabitService.swift */; };
+		0BAD65A0229525800083FA7E /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* GoalService.swift */; };
+		0BAD65A1229525800083FA7E /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD24229497410065A427 /* SummaryService.swift */; };
+		0BAD65A2229525800083FA7E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1B229467740065A427 /* Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +121,12 @@
 		0B2B0CC82291736E00477154 /* SummaryInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryInterfaceController.swift; sourceTree = "<group>"; };
 		0B2B0CCA229173B500477154 /* HabitInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitInterfaceController.swift; sourceTree = "<group>"; };
 		0B2B0CD6229174FF00477154 /* HabitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRow.swift; sourceTree = "<group>"; };
+		0BAD65662295200D0083FA7E /* WatchMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchMe.entitlements; sourceTree = "<group>"; };
+		0BAD6567229520270083FA7E /* WatchMe WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchMe WatchKit App.entitlements"; sourceTree = "<group>"; };
+		0BAD6568229520320083FA7E /* WatchMe WatchKit App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchMe WatchKit App Extension.entitlements"; sourceTree = "<group>"; };
+		0BAD656E229520BE0083FA7E /* WatchMeCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchMeCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BAD6570229520BE0083FA7E /* WatchMeCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchMeCore.h; sourceTree = "<group>"; };
+		0BAD6571229520BE0083FA7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BD1FD14229465A80065A427 /* WeekdayState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayState.swift; sourceTree = "<group>"; };
 		0BD1FD16229465C90065A427 /* HabitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitService.swift; sourceTree = "<group>"; };
 		0BD1FD182294669A0065A427 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
@@ -129,6 +152,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BAD656B229520BE0083FA7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -136,9 +166,11 @@
 			isa = PBXGroup;
 			children = (
 				0B2B0C5622902FBE00477154 /* WatchMe */,
+				0BAD656F229520BE0083FA7E /* WatchMeCore */,
 				0B2B0C9722906B7500477154 /* WatchMe WatchKit App */,
 				0B2B0CA622906B7500477154 /* WatchMe WatchKit App Extension */,
 				0B2B0C5522902FBE00477154 /* Products */,
+				0BAD658B229524110083FA7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +180,7 @@
 				0B2B0C5422902FBE00477154 /* WatchMe.app */,
 				0B2B0C9622906B7400477154 /* WatchMe WatchKit App.app */,
 				0B2B0CA222906B7500477154 /* WatchMe WatchKit App Extension.appex */,
+				0BAD656E229520BE0083FA7E /* WatchMeCore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +188,7 @@
 		0B2B0C5622902FBE00477154 /* WatchMe */ = {
 			isa = PBXGroup;
 			children = (
+				0BAD65662295200D0083FA7E /* WatchMe.entitlements */,
 				0B2B0C6922902FF200477154 /* Source */,
 				0B2B0C6A22902FF700477154 /* Resources */,
 			);
@@ -165,9 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				0B2B0C5722902FBE00477154 /* AppDelegate.swift */,
-				0BD1FD13229465980065A427 /* Models */,
-				0BD1FD122294658B0065A427 /* Services */,
-				0BD1FD1A2294675A0065A427 /* Utils */,
 				0B2B0C6E2290302E00477154 /* Controllers */,
 				0B2B0CBB22916B9600477154 /* Views */,
 			);
@@ -222,6 +253,7 @@
 		0B2B0C9722906B7500477154 /* WatchMe WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				0BAD6567229520270083FA7E /* WatchMe WatchKit App.entitlements */,
 				0B2B0CD12291746F00477154 /* Resources */,
 			);
 			path = "WatchMe WatchKit App";
@@ -230,6 +262,7 @@
 		0B2B0CA622906B7500477154 /* WatchMe WatchKit App Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0BAD6568229520320083FA7E /* WatchMe WatchKit App Extension.entitlements */,
 				0B2B0CCD2291740A00477154 /* Source */,
 				0B2B0CCE2291741600477154 /* Resources */,
 			);
@@ -333,6 +366,25 @@
 			path = Rows;
 			sourceTree = "<group>";
 		};
+		0BAD656F229520BE0083FA7E /* WatchMeCore */ = {
+			isa = PBXGroup;
+			children = (
+				0BAD6570229520BE0083FA7E /* WatchMeCore.h */,
+				0BD1FD13229465980065A427 /* Models */,
+				0BD1FD122294658B0065A427 /* Services */,
+				0BD1FD1A2294675A0065A427 /* Utils */,
+				0BAD6571229520BE0083FA7E /* Info.plist */,
+			);
+			path = WatchMeCore;
+			sourceTree = "<group>";
+		};
+		0BAD658B229524110083FA7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0BD1FD122294658B0065A427 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +415,17 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0BAD6569229520BE0083FA7E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BAD6572229520BE0083FA7E /* WatchMeCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0B2B0C5322902FBE00477154 /* WatchMe */ = {
@@ -418,6 +481,24 @@
 			productReference = 0B2B0CA222906B7500477154 /* WatchMe WatchKit App Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		0BAD656D229520BE0083FA7E /* WatchMeCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BAD6577229520BE0083FA7E /* Build configuration list for PBXNativeTarget "WatchMeCore" */;
+			buildPhases = (
+				0BAD6569229520BE0083FA7E /* Headers */,
+				0BAD656A229520BE0083FA7E /* Sources */,
+				0BAD656B229520BE0083FA7E /* Frameworks */,
+				0BAD656C229520BE0083FA7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatchMeCore;
+			productName = WatchMeCore;
+			productReference = 0BAD656E229520BE0083FA7E /* WatchMeCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -430,11 +511,29 @@
 				TargetAttributes = {
 					0B2B0C5322902FBE00477154 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					0B2B0C9522906B7400477154 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					0B2B0CA122906B7500477154 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					0BAD656D229520BE0083FA7E = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -453,6 +552,7 @@
 			projectRoot = "";
 			targets = (
 				0B2B0C5322902FBE00477154 /* WatchMe */,
+				0BAD656D229520BE0083FA7E /* WatchMeCore */,
 				0B2B0C9522906B7400477154 /* WatchMe WatchKit App */,
 				0B2B0CA122906B7500477154 /* WatchMe WatchKit App Extension */,
 			);
@@ -487,6 +587,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0BAD656C229520BE0083FA7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -494,20 +601,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BAD65982295257E0083FA7E /* GoalService.swift in Sources */,
+				0BAD659A2295257F0083FA7E /* Storage.swift in Sources */,
 				0B2B0CBD22916BB300477154 /* TodayViewController.swift in Sources */,
-				0BD1FD15229465A80065A427 /* WeekdayState.swift in Sources */,
+				0BAD65932295257E0083FA7E /* WeekdayState.swift in Sources */,
+				0BAD65972295257E0083FA7E /* HabitService.swift in Sources */,
 				0B2B0C5822902FBE00477154 /* AppDelegate.swift in Sources */,
-				0BD1FD20229473FF0065A427 /* Activity.swift in Sources */,
 				0B2B0CC7229170C000477154 /* AddViewController.swift in Sources */,
 				0B2B0CC522916EBF00477154 /* AllTableViewCell.swift in Sources */,
-				0BD1FD27229498710065A427 /* Summary.swift in Sources */,
 				0B2B0CC322916EA500477154 /* AllViewController.swift in Sources */,
-				0BD1FD192294669A0065A427 /* Habit.swift in Sources */,
-				0BD1FD25229497410065A427 /* SummaryService.swift in Sources */,
-				0BD1FD17229465C90065A427 /* HabitService.swift in Sources */,
+				0BAD65992295257F0083FA7E /* SummaryService.swift in Sources */,
+				0BAD65962295257E0083FA7E /* Summary.swift in Sources */,
+				0BAD65952295257E0083FA7E /* Activity.swift in Sources */,
+				0BAD65942295257E0083FA7E /* Habit.swift in Sources */,
 				0B2B0CC122916BE100477154 /* TodayTableViewCell.swift in Sources */,
-				0BD1FD1C229467740065A427 /* Storage.swift in Sources */,
-				0BD1FD222294752B0065A427 /* GoalService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,12 +622,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BAD65A0229525800083FA7E /* GoalService.swift in Sources */,
+				0BAD65A2229525800083FA7E /* Storage.swift in Sources */,
 				0B2B0CCB229173B500477154 /* HabitInterfaceController.swift in Sources */,
+				0BAD659B229525800083FA7E /* WeekdayState.swift in Sources */,
+				0BAD659F229525800083FA7E /* HabitService.swift in Sources */,
 				0B2B0CC92291736E00477154 /* SummaryInterfaceController.swift in Sources */,
 				0B2B0CAA22906B7500477154 /* ExtensionDelegate.swift in Sources */,
 				0B2B0CD7229174FF00477154 /* HabitRow.swift in Sources */,
 				0B2B0CA822906B7500477154 /* TodayInterfaceController.swift in Sources */,
+				0BAD65A1229525800083FA7E /* SummaryService.swift in Sources */,
+				0BAD659E229525800083FA7E /* Summary.swift in Sources */,
+				0BAD659D229525800083FA7E /* Activity.swift in Sources */,
+				0BAD659C229525800083FA7E /* Habit.swift in Sources */,
 				0B2B0CAC22906B7500477154 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BAD656A229520BE0083FA7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BAD6588229521230083FA7E /* GoalService.swift in Sources */,
+				0BAD6585229521230083FA7E /* Activity.swift in Sources */,
+				0BAD6587229521230083FA7E /* HabitService.swift in Sources */,
+				0BAD6584229521230083FA7E /* Habit.swift in Sources */,
+				0BAD6589229521230083FA7E /* SummaryService.swift in Sources */,
+				0BAD658A229521230083FA7E /* Storage.swift in Sources */,
+				0BAD6586229521230083FA7E /* Summary.swift in Sources */,
+				0BAD6583229521230083FA7E /* WeekdayState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +933,64 @@
 			};
 			name = Release;
 		};
+		0BAD6578229520BE0083FA7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K2WTD52A5C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WatchMeCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rubygarage.pdp.WatchMeCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0BAD6579229520BE0083FA7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K2WTD52A5C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WatchMeCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.rubygarage.pdp.WatchMeCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -838,6 +1026,15 @@
 			buildConfigurations = (
 				0B2B0CB822906B7600477154 /* Debug */,
 				0B2B0CB922906B7600477154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BAD6577229520BE0083FA7E /* Build configuration list for PBXNativeTarget "WatchMeCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BAD6578229520BE0083FA7E /* Debug */,
+				0BAD6579229520BE0083FA7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

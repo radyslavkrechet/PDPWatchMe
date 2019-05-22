@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Summary {
-    let completionRate: Int
-    let completed: Int
-    let started: Int
-    let notDone: Int
+public struct Summary {
+    public let completionRate: Int
+    public let completed: Int
+    public let started: Int
+    public let notDone: Int
 
     init(completionRate: Int = 100, completed: Int = 0, started: Int = 0, notDone: Int = 0) {
         self.completionRate = completionRate

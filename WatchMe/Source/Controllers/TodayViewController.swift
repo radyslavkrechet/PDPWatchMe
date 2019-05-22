@@ -44,7 +44,7 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     private func loadData() {
         habits = HabitService.todayHabits
         activities = ActivityService.todayActivities
-        summary = SummaryService.summary(withHabits: habits, activities: activities)
+        summary = SummaryService.todaySummary
     }
 
     private func populateViewsWithSummary() {

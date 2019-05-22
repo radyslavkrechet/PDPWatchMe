@@ -51,7 +51,7 @@
             <objects>
                 <controller title="Summary" id="BLF-7R-vpc" customClass="SummaryInterfaceController" customModule="WatchMe_WatchKit_App_Extension">
                     <items>
-                        <label alignment="center" text="0%" id="K4R-Ga-Qi1">
+                        <label alignment="center" text="100%" id="K4R-Ga-Qi1">
                             <fontDescription key="font" type="boldSystem" pointSize="32"/>
                         </label>
                         <label alignment="center" textAlignment="center" numberOfLines="0" id="ntc-y5-Fic">

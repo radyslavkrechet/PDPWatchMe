@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Activity: Codable {
-    let habitId: UUID
-    let done: Int
+public struct Activity: Codable {
+    public let habitId: UUID
+    public let done: Int
 
     init(habitId: UUID, done: Int = 0) {
         self.habitId = habitId

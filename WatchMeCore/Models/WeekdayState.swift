@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum WeekdayState: Int, Codable {
+public enum WeekdayState: Int, Codable {
     case unselect
     case select
 }

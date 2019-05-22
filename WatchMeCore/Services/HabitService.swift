@@ -10,8 +10,8 @@ import Foundation
 
 private let habitsKey = "habits"
 
-struct HabitService {
-    static var allHabits: [Habit] {
+public struct HabitService {
+    public static var allHabits: [Habit] {
         guard let data = Storage.defaults.data(forKey: habitsKey) else {
             return []
         }
@@ -19,7 +19,7 @@ struct HabitService {
         return try! JSONDecoder().decode([Habit].self, from: data)
     }
 
-    static var todayHabits: [Habit] {
+    public static var todayHabits: [Habit] {
         return allHabits.filter { $0.weekdays[currentWeekday] == .select }
     }
 
@@ -37,7 +37,7 @@ struct HabitService {
         return weekday
     }
 
-    static func addHabit(withName name: String, goal: Int, weekdays: [WeekdayState]) {
+    public static func addHabit(withName name: String, goal: Int, weekdays: [WeekdayState]) {
         let habit = Habit(name: name, goal: goal, weekdays: weekdays)
         var habits = allHabits
         habits.insert(habit, at: 0)
@@ -48,7 +48,7 @@ struct HabitService {
         }
     }
 
-    static func deleleHabit(atIndex index: Int) {
+    public static func deleleHabit(atIndex index: Int) {
         var habits = allHabits
         let removedHabit = habits.remove(at: index)
         setHabits(habits)

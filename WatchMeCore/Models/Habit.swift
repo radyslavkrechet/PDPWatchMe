@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Habit: Codable {
-    let id: UUID
-    let name: String
-    let goal: Int
-    let weekdays: [WeekdayState]
+public struct Habit: Codable {
+    public let id: UUID
+    public let name: String
+    public let goal: Int
+    public let weekdays: [WeekdayState]
 
     init(id: UUID = UUID(), name: String, goal: Int, weekdays: [WeekdayState]) {
         self.id = id
