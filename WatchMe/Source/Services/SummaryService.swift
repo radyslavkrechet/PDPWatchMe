@@ -9,9 +9,13 @@
 import Foundation
 
 struct SummaryService {
-    static func summary(withHabits habits: [Habit], goals: [Goal]) -> Summary {
+    static func summary(withHabits habits: [Habit], activities: [Activity]) -> Summary {
+        if habits.isEmpty {
+            return Summary()
+        }
+
         let goal = habits.reduce(0) { $0 + $1.goal }
-        let done = goals.reduce(0) { $0 + $1.done }
+        let done = activities.reduce(0) { $0 + $1.done }
         let completionRate = rate(withGoal: goal, done: done)
 
         var completed = 0
@@ -19,7 +23,7 @@ struct SummaryService {
         var notDone = 0
         for index in 0..<habits.count {
             let habit = habits[index]
-            let goal = goals[index]
+            let goal = activities[index]
             if habit.goal == goal.done {
                 completed += 1
             } else if goal.done == 0 {
@@ -29,13 +33,10 @@ struct SummaryService {
             }
         }
 
-        return Summary(completionRate: completionRate,
-                       completed: String(completed),
-                       started: String(started),
-                       notDone: String(notDone))
+        return Summary(completionRate: completionRate, completed: completed, started: started, notDone: notDone)
     }
 
-    static func rate(withGoal goal: Int, done: Int) -> String {
-        return "\(Int(Double(100) / Double(goal) * Double(done)))%"
+    static func rate(withGoal goal: Int, done: Int) -> Int {
+        return (Int(Double(100) / Double(goal) * Double(done)))
     }
 }

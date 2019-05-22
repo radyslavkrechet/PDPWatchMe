@@ -31,7 +31,7 @@
 		0BD1FD17229465C90065A427 /* HabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD16229465C90065A427 /* HabitService.swift */; };
 		0BD1FD192294669A0065A427 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD182294669A0065A427 /* Habit.swift */; };
 		0BD1FD1C229467740065A427 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1B229467740065A427 /* Storage.swift */; };
-		0BD1FD20229473FF0065A427 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1F229473FF0065A427 /* Goal.swift */; };
+		0BD1FD20229473FF0065A427 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1F229473FF0065A427 /* Activity.swift */; };
 		0BD1FD222294752B0065A427 /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* GoalService.swift */; };
 		0BD1FD25229497410065A427 /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD24229497410065A427 /* SummaryService.swift */; };
 		0BD1FD27229498710065A427 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD26229498710065A427 /* Summary.swift */; };
@@ -108,7 +108,7 @@
 		0BD1FD16229465C90065A427 /* HabitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitService.swift; sourceTree = "<group>"; };
 		0BD1FD182294669A0065A427 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		0BD1FD1B229467740065A427 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		0BD1FD1F229473FF0065A427 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		0BD1FD1F229473FF0065A427 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		0BD1FD212294752B0065A427 /* GoalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalService.swift; sourceTree = "<group>"; };
 		0BD1FD24229497410065A427 /* SummaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryService.swift; sourceTree = "<group>"; };
 		0BD1FD26229498710065A427 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
@@ -348,7 +348,7 @@
 			children = (
 				0BD1FD14229465A80065A427 /* WeekdayState.swift */,
 				0BD1FD182294669A0065A427 /* Habit.swift */,
-				0BD1FD1F229473FF0065A427 /* Goal.swift */,
+				0BD1FD1F229473FF0065A427 /* Activity.swift */,
 				0BD1FD26229498710065A427 /* Summary.swift */,
 			);
 			path = Models;
@@ -497,7 +497,7 @@
 				0B2B0CBD22916BB300477154 /* TodayViewController.swift in Sources */,
 				0BD1FD15229465A80065A427 /* WeekdayState.swift in Sources */,
 				0B2B0C5822902FBE00477154 /* AppDelegate.swift in Sources */,
-				0BD1FD20229473FF0065A427 /* Goal.swift in Sources */,
+				0BD1FD20229473FF0065A427 /* Activity.swift in Sources */,
 				0B2B0CC7229170C000477154 /* AddViewController.swift in Sources */,
 				0B2B0CC522916EBF00477154 /* AllTableViewCell.swift in Sources */,
 				0BD1FD27229498710065A427 /* Summary.swift in Sources */,

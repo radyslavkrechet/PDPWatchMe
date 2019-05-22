@@ -16,7 +16,7 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView: UITableView!
 
     private var habits: [Habit] = []
-    private var goals: [Goal] = []
+    private var activities: [Activity] = []
     private var summary: Summary!
     
     // MARK: - View Controller Lifecycle
@@ -24,7 +24,7 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        GoalService.prepareGoals()
+        ActivityService.prepareActivities()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -43,15 +43,15 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     private func loadData() {
         habits = HabitService.todayHabits
-        goals = GoalService.allGoals
-        summary = SummaryService.summary(withHabits: habits, goals: goals)
+        activities = ActivityService.todayActivities
+        summary = SummaryService.summary(withHabits: habits, activities: activities)
     }
 
     private func populateViewsWithSummary() {
-        completionRateLabel.text = summary.completionRate
-        completedLabel.text = summary.completed
-        startedLabel.text = summary.started
-        notDoneLabel.text = summary.notDone
+        completionRateLabel.text = "\(summary.completionRate)%"
+        completedLabel.text = String(summary.completed)
+        startedLabel.text = String(summary.started)
+        notDoneLabel.text = String(summary.notDone)
     }
 
     // MARK: - UITableViewDataSource
@@ -64,9 +64,9 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "habitWithRate", for: indexPath)
         if let cell = cell as? TodayTableViewCell {
             let habit = habits[indexPath.row]
-            let goal = goals[indexPath.row]
+            let activity = activities[indexPath.row]
             cell.nameLabel.text = habit.name
-            cell.rateLabel.text = SummaryService.rate(withGoal: habit.goal, done: goal.done)
+            cell.rateLabel.text = "\(SummaryService.rate(withGoal: habit.goal, done: activity.done))%"
         }
         return cell
     }
@@ -75,23 +75,23 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let habit = habits[indexPath.row]
-        let goal = goals[indexPath.row]
+        let activity = activities[indexPath.row]
 
-        let doneAlertAction = UIAlertAction(title: "Done", style: .default) { _ in
-            GoalService.doneGoal(forHabitWithId: habit.id)
+        let doneAlertAction = UIAlertAction(title: "Done", style: .default) { [unowned self] _ in
+            ActivityService.doneActivity(forHabitWithId: habit.id)
             self.prepareController()
         }
-        doneAlertAction.isEnabled = goal.done < habit.goal
+        doneAlertAction.isEnabled = activity.done < habit.goal
 
-        let undoAlertAction = UIAlertAction(title: "Undo", style: .default) { _ in
-            GoalService.undoGoal(forHabitWithId: habit.id)
+        let undoAlertAction = UIAlertAction(title: "Undo", style: .default) { [unowned self] _ in
+            ActivityService.undoActivity(forHabitWithId: habit.id)
             self.prepareController()
         }
-        undoAlertAction.isEnabled = goal.done > 0
+        undoAlertAction.isEnabled = activity.done > 0
 
         let cancelAlertAction = UIAlertAction(title: "Cancel", style: .cancel)
 
-        let message = "\(goal.done)/\(habit.goal)"
+        let message = "\(activity.done)/\(habit.goal)"
         let alertController = UIAlertController(title: habit.name, message: message, preferredStyle: .alert)
         alertController.addAction(doneAlertAction)
         alertController.addAction(undoAlertAction)

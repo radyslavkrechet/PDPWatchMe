@@ -38,27 +38,23 @@ struct HabitService {
     }
 
     static func addHabit(withName name: String, goal: Int, weekdays: [WeekdayState]) {
-        let id = UUID()
-        let habit = Habit(id: id, name: name, goal: goal, weekdays: weekdays)
-
+        let habit = Habit(name: name, goal: goal, weekdays: weekdays)
         var habits = allHabits
         habits.insert(habit, at: 0)
-
         setHabits(habits)
 
         if weekdays[currentWeekday] == .select {
-            GoalService.addGoal(forHabitWithId: id)
+            ActivityService.addActivity(forHabitWithId: habit.id)
         }
     }
 
     static func deleleHabit(atIndex index: Int) {
         var habits = allHabits
         let removedHabit = habits.remove(at: index)
-
         setHabits(habits)
 
         if removedHabit.weekdays[currentWeekday] == .select {
-            GoalService.deleteGoal(forHabitWithId: removedHabit.id)
+            ActivityService.deleteActivity(forHabitWithId: removedHabit.id)
         }
     }
 

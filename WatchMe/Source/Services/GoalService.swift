@@ -1,5 +1,5 @@
 //
-//  GoalService.swift
+//  ActivityService.swift
 //  WatchMe
 //
 //  Created by Radyslav Krechet on 5/21/19.
@@ -8,68 +8,65 @@
 
 import Foundation
 
-private let goalsKey = "goals"
-private let goaslDateKey = "goaslDate"
+private let activitiesKey = "activities"
+private let activitiesDateKey = "activitiesDate"
 
-struct GoalService {
-    static var allGoals: [Goal] {
-        guard let data = Storage.defaults.data(forKey: goalsKey) else {
+struct ActivityService {
+    static var todayActivities: [Activity] {
+        guard let data = Storage.defaults.data(forKey: activitiesKey) else {
             return []
         }
 
-        return try! JSONDecoder().decode([Goal].self, from: data)
+        return try! JSONDecoder().decode([Activity].self, from: data)
     }
 
-    static func prepareGoals() {
-        let timestamp = Storage.defaults.double(forKey: goaslDateKey)
-        let goalDate = Date(timeIntervalSince1970: timestamp)
-        if !Calendar.current.isDateInToday(goalDate) {
+    static func prepareActivities() {
+        let timestamp = Storage.defaults.double(forKey: activitiesDateKey)
+        let date = Date(timeIntervalSince1970: timestamp)
+        if !Calendar.current.isDateInToday(date) {
             let today = Date().timeIntervalSince1970
-            Storage.defaults.set(today, forKey: goaslDateKey)
+            Storage.defaults.set(today, forKey: activitiesDateKey)
 
-            let goals = HabitService.todayHabits.map { Goal(habitId: $0.id) }
-            let data = try! JSONEncoder().encode(goals)
-            Storage.defaults.set(data, forKey: goalsKey)
+            let activities = HabitService.todayHabits.map { Activity(habitId: $0.id) }
+            setActivities(activities)
         }
     }
 
-    static func addGoal(forHabitWithId id: UUID) {
-        let goal = Goal(habitId: id)
-        var goals = allGoals
-        goals.insert(goal, at: 0)
-
-        setGoals(goals)
+    static func addActivity(forHabitWithId id: UUID) {
+        let activity = Activity(habitId: id)
+        var activities = todayActivities
+        activities.insert(activity, at: 0)
+        setActivities(activities)
     }
 
-    static func deleteGoal(forHabitWithId id: UUID) {
-        var goals = allGoals
-        goals.removeAll { $0.habitId == id }
-
-        setGoals(goals)
+    static func deleteActivity(forHabitWithId id: UUID) {
+        var activities = todayActivities
+        activities.removeAll { $0.habitId == id }
+        setActivities(activities)
     }
 
-    static func doneGoal(forHabitWithId id: UUID) {
-        replaceGoal(forHabitWithId: id, doneDelta: 1)
+    static func doneActivity(forHabitWithId id: UUID) {
+        replaceActivity(forHabitWithId: id, doneDelta: 1)
     }
 
-    static func undoGoal(forHabitWithId id: UUID) {
-        replaceGoal(forHabitWithId: id, doneDelta: -1)
+    static func undoActivity(forHabitWithId id: UUID) {
+        replaceActivity(forHabitWithId: id, doneDelta: -1)
     }
 
-    private static func setGoals(_ goals: [Goal]) {
-        let data = try! JSONEncoder().encode(goals)
-        Storage.defaults.set(data, forKey: goalsKey)
+    private static func setActivities(_ activities: [Activity]) {
+        let data = try! JSONEncoder().encode(activities)
+        Storage.defaults.set(data, forKey: activitiesKey)
     }
 
-    private static func replaceGoal(forHabitWithId id: UUID, doneDelta: Int) {
-        var goals = allGoals
-        guard let index = goals.firstIndex(where: { $0.habitId == id }) else {
+    private static func replaceActivity(forHabitWithId id: UUID, doneDelta: Int) {
+        var activities = todayActivities
+        guard let index = activities.firstIndex(where: { $0.habitId == id }) else {
             return
         }
 
-        let removedGoal = goals.remove(at: index)
-        let goal = Goal(habitId: id, done: removedGoal.done + doneDelta)
-        goals.insert(goal, at: index)
-        setGoals(goals)
+        let removedActivity = activities.remove(at: index)
+        let activity = Activity(habitId: id, done: removedActivity.done + doneDelta)
+        activities.insert(activity, at: index)
+        setActivities(activities)
     }
 }

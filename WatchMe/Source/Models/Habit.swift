@@ -13,4 +13,11 @@ struct Habit: Codable {
     let name: String
     let goal: Int
     let weekdays: [WeekdayState]
+
+    init(id: UUID = UUID(), name: String, goal: Int, weekdays: [WeekdayState]) {
+        self.id = id
+        self.name = name
+        self.goal = goal
+        self.weekdays = weekdays
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  Goal.swift
+//  Activity.swift
 //  WatchMe
 //
 //  Created by Radyslav Krechet on 5/21/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Goal: Codable {
+struct Activity: Codable {
     let habitId: UUID
     let done: Int
 

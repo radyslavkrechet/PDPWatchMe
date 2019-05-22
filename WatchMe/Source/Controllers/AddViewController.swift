@@ -35,6 +35,16 @@ class AddViewController: UIViewController {
         }
     }
 
+    private func setupButton(_ button: UIButton,
+                             withBackgroundColor backgroundColor: UIColor,
+                             titleColor: UIColor,
+                             tag: Int) {
+
+        button.backgroundColor = backgroundColor
+        button.setTitleColor(titleColor, for: .normal)
+        button.tag = tag
+    }
+
     // MARK: - Actions
 
     @IBAction func weekdayButtonDidPress(_ sender: UIButton) {
@@ -44,13 +54,9 @@ class AddViewController: UIViewController {
 
         switch weekday {
         case .unselect:
-            sender.backgroundColor = brandColor
-            sender.setTitleColor(UIColor.white, for: .normal)
-            sender.tag = WeekdayState.select.rawValue
+            setupButton(sender, withBackgroundColor: brandColor, titleColor: .white, tag: WeekdayState.select.rawValue)
         case .select:
-            sender.backgroundColor = UIColor.white
-            sender.setTitleColor(brandColor, for: .normal)
-            sender.tag = WeekdayState.unselect.rawValue
+            setupButton(sender, withBackgroundColor: .white, titleColor: brandColor, tag: WeekdayState.unselect.rawValue)
         }
     }
 

@@ -9,8 +9,15 @@
 import Foundation
 
 struct Summary {
-    let completionRate: String
-    let completed: String
-    let started: String
-    let notDone: String
+    let completionRate: Int
+    let completed: Int
+    let started: Int
+    let notDone: Int
+
+    init(completionRate: Int = 100, completed: Int = 0, started: Int = 0, notDone: Int = 0) {
+        self.completionRate = completionRate
+        self.completed = completed
+        self.started = started
+        self.notDone = notDone
+    }
 }

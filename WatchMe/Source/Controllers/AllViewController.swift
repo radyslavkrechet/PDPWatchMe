@@ -52,7 +52,7 @@ class AllViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let habit = habits[indexPath.row]
 
-        let deleteAlertAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+        let deleteAlertAction = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
             HabitService.deleleHabit(atIndex: indexPath.row)
             self.prepareController()
         }
