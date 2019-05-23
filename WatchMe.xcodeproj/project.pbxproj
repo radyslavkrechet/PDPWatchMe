@@ -16,7 +16,6 @@
 		0B2B0CA322906B7500477154 /* WatchMe WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0B2B0CA222906B7500477154 /* WatchMe WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0B2B0CA822906B7500477154 /* TodayInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0CA722906B7500477154 /* TodayInterfaceController.swift */; };
 		0B2B0CAA22906B7500477154 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0CA922906B7500477154 /* ExtensionDelegate.swift */; };
-		0B2B0CAC22906B7500477154 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0CAB22906B7500477154 /* ComplicationController.swift */; };
 		0B2B0CAE22906B7600477154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2B0CAD22906B7600477154 /* Assets.xcassets */; };
 		0B2B0CB222906B7600477154 /* WatchMe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0B2B0C9622906B7400477154 /* WatchMe WatchKit App.app */; };
 		0B2B0CBD22916BB300477154 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0CBC22916BB300477154 /* TodayViewController.swift */; };
@@ -33,7 +32,7 @@
 		0BAD6585229521230083FA7E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1F229473FF0065A427 /* Activity.swift */; };
 		0BAD6586229521230083FA7E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD26229498710065A427 /* Summary.swift */; };
 		0BAD6587229521230083FA7E /* HabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD16229465C90065A427 /* HabitService.swift */; };
-		0BAD6588229521230083FA7E /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* GoalService.swift */; };
+		0BAD6588229521230083FA7E /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* ActivityService.swift */; };
 		0BAD6589229521230083FA7E /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD24229497410065A427 /* SummaryService.swift */; };
 		0BAD658A229521230083FA7E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1B229467740065A427 /* Storage.swift */; };
 		0BAD65932295257E0083FA7E /* WeekdayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD14229465A80065A427 /* WeekdayState.swift */; };
@@ -41,7 +40,7 @@
 		0BAD65952295257E0083FA7E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1F229473FF0065A427 /* Activity.swift */; };
 		0BAD65962295257E0083FA7E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD26229498710065A427 /* Summary.swift */; };
 		0BAD65972295257E0083FA7E /* HabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD16229465C90065A427 /* HabitService.swift */; };
-		0BAD65982295257E0083FA7E /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* GoalService.swift */; };
+		0BAD65982295257E0083FA7E /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* ActivityService.swift */; };
 		0BAD65992295257F0083FA7E /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD24229497410065A427 /* SummaryService.swift */; };
 		0BAD659A2295257F0083FA7E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1B229467740065A427 /* Storage.swift */; };
 		0BAD659B229525800083FA7E /* WeekdayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD14229465A80065A427 /* WeekdayState.swift */; };
@@ -49,9 +48,12 @@
 		0BAD659D229525800083FA7E /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1F229473FF0065A427 /* Activity.swift */; };
 		0BAD659E229525800083FA7E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD26229498710065A427 /* Summary.swift */; };
 		0BAD659F229525800083FA7E /* HabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD16229465C90065A427 /* HabitService.swift */; };
-		0BAD65A0229525800083FA7E /* GoalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* GoalService.swift */; };
+		0BAD65A0229525800083FA7E /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD212294752B0065A427 /* ActivityService.swift */; };
 		0BAD65A1229525800083FA7E /* SummaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD24229497410065A427 /* SummaryService.swift */; };
 		0BAD65A2229525800083FA7E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD1FD1B229467740065A427 /* Storage.swift */; };
+		0BB643DA229689140035B170 /* PreparationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB643D9229689140035B170 /* PreparationController.swift */; };
+		0BB643DC229699FC0035B170 /* PreparationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB643D9229689140035B170 /* PreparationController.swift */; };
+		0BB643DD229699FC0035B170 /* PreparationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB643D9229689140035B170 /* PreparationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +112,6 @@
 		0B2B0CA222906B7500477154 /* WatchMe WatchKit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchMe WatchKit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2B0CA722906B7500477154 /* TodayInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayInterfaceController.swift; sourceTree = "<group>"; };
 		0B2B0CA922906B7500477154 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		0B2B0CAB22906B7500477154 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		0B2B0CAD22906B7600477154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B2B0CAF22906B7600477154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B2B0CBC22916BB300477154 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -127,12 +128,13 @@
 		0BAD656E229520BE0083FA7E /* WatchMeCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchMeCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BAD6570229520BE0083FA7E /* WatchMeCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchMeCore.h; sourceTree = "<group>"; };
 		0BAD6571229520BE0083FA7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BB643D9229689140035B170 /* PreparationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationController.swift; sourceTree = "<group>"; };
 		0BD1FD14229465A80065A427 /* WeekdayState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayState.swift; sourceTree = "<group>"; };
 		0BD1FD16229465C90065A427 /* HabitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitService.swift; sourceTree = "<group>"; };
 		0BD1FD182294669A0065A427 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		0BD1FD1B229467740065A427 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		0BD1FD1F229473FF0065A427 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		0BD1FD212294752B0065A427 /* GoalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalService.swift; sourceTree = "<group>"; };
+		0BD1FD212294752B0065A427 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		0BD1FD24229497410065A427 /* SummaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryService.swift; sourceTree = "<group>"; };
 		0BD1FD26229498710065A427 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,7 +286,6 @@
 				0B2B0CA722906B7500477154 /* TodayInterfaceController.swift */,
 				0B2B0CC82291736E00477154 /* SummaryInterfaceController.swift */,
 				0B2B0CCA229173B500477154 /* HabitInterfaceController.swift */,
-				0B2B0CAB22906B7500477154 /* ComplicationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -370,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				0BAD6570229520BE0083FA7E /* WatchMeCore.h */,
+				0BB643DB229699EF0035B170 /* Protocols */,
 				0BD1FD13229465980065A427 /* Models */,
 				0BD1FD122294658B0065A427 /* Services */,
 				0BD1FD1A2294675A0065A427 /* Utils */,
@@ -385,11 +387,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0BB643DB229699EF0035B170 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0BB643D9229689140035B170 /* PreparationController.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		0BD1FD122294658B0065A427 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				0BD1FD16229465C90065A427 /* HabitService.swift */,
-				0BD1FD212294752B0065A427 /* GoalService.swift */,
+				0BD1FD212294752B0065A427 /* ActivityService.swift */,
 				0BD1FD24229497410065A427 /* SummaryService.swift */,
 			);
 			path = Services;
@@ -601,7 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BAD65982295257E0083FA7E /* GoalService.swift in Sources */,
+				0BAD65982295257E0083FA7E /* ActivityService.swift in Sources */,
 				0BAD659A2295257F0083FA7E /* Storage.swift in Sources */,
 				0B2B0CBD22916BB300477154 /* TodayViewController.swift in Sources */,
 				0BAD65932295257E0083FA7E /* WeekdayState.swift in Sources */,
@@ -615,6 +625,7 @@
 				0BAD65952295257E0083FA7E /* Activity.swift in Sources */,
 				0BAD65942295257E0083FA7E /* Habit.swift in Sources */,
 				0B2B0CC122916BE100477154 /* TodayTableViewCell.swift in Sources */,
+				0BB643DD229699FC0035B170 /* PreparationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,7 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BAD65A0229525800083FA7E /* GoalService.swift in Sources */,
+				0BAD65A0229525800083FA7E /* ActivityService.swift in Sources */,
 				0BAD65A2229525800083FA7E /* Storage.swift in Sources */,
 				0B2B0CCB229173B500477154 /* HabitInterfaceController.swift in Sources */,
 				0BAD659B229525800083FA7E /* WeekdayState.swift in Sources */,
@@ -635,7 +646,7 @@
 				0BAD659E229525800083FA7E /* Summary.swift in Sources */,
 				0BAD659D229525800083FA7E /* Activity.swift in Sources */,
 				0BAD659C229525800083FA7E /* Habit.swift in Sources */,
-				0B2B0CAC22906B7500477154 /* ComplicationController.swift in Sources */,
+				0BB643DA229689140035B170 /* PreparationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,7 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BAD6588229521230083FA7E /* GoalService.swift in Sources */,
+				0BAD6588229521230083FA7E /* ActivityService.swift in Sources */,
 				0BAD6585229521230083FA7E /* Activity.swift in Sources */,
 				0BAD6587229521230083FA7E /* HabitService.swift in Sources */,
 				0BAD6584229521230083FA7E /* Habit.swift in Sources */,
@@ -651,6 +662,7 @@
 				0BAD658A229521230083FA7E /* Storage.swift in Sources */,
 				0BAD6586229521230083FA7E /* Summary.swift in Sources */,
 				0BAD6583229521230083FA7E /* WeekdayState.swift in Sources */,
+				0BB643DC229699FC0035B170 /* PreparationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

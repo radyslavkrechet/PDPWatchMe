@@ -32,6 +32,11 @@ public struct ActivityService {
         }
     }
 
+    public static func setActivities(_ activities: [Activity]) {
+        let data = try! JSONEncoder().encode(activities)
+        Storage.defaults.set(data, forKey: activitiesKey)
+    }
+
     public static func addActivity(forHabitWithId id: UUID) {
         let activity = Activity(habitId: id)
         var activities = todayActivities
@@ -51,11 +56,6 @@ public struct ActivityService {
 
     public static func undoActivity(forHabitWithId id: UUID) {
         replaceActivity(forHabitWithId: id, doneDelta: -1)
-    }
-
-    private static func setActivities(_ activities: [Activity]) {
-        let data = try! JSONEncoder().encode(activities)
-        Storage.defaults.set(data, forKey: activitiesKey)
     }
 
     private static func replaceActivity(forHabitWithId id: UUID, doneDelta: Int) {

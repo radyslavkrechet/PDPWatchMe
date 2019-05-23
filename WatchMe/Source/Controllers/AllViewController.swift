@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AllViewController: UIViewController, PreparationController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     private var habits: [Habit] = []
@@ -21,12 +21,14 @@ class AllViewController: UIViewController, UITableViewDataSource, UITableViewDel
         prepareController()
     }
 
-    // MARK: - Setup
+    // MARK: - PreparationController
 
-    private func prepareController() {
+    func prepareController() {
         loadData()
         tableView.reloadData()
     }
+
+    // MARK: - Setup
 
     private func loadData() {
         habits = HabitService.allHabits

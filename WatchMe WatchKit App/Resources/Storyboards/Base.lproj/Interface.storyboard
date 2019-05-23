@@ -14,6 +14,7 @@
             <objects>
                 <controller title="Today" id="AgC-eL-Hgc" customClass="TodayInterfaceController" customModule="WatchMe_WatchKit_App_Extension">
                     <items>
+                        <label alignment="center" verticalAlignment="center" hidden="YES" text="No work for today" textAlignment="left" id="YuP-AT-HOY"/>
                         <table alignment="left" id="sRj-YZ-fxa">
                             <items>
                                 <tableRow identifier="habit" id="mOz-hz-JA3" customClass="HabitRow" customModule="WatchMe_WatchKit_App_Extension">
@@ -39,6 +40,7 @@
                         </table>
                     </items>
                     <connections>
+                        <outlet property="noWorkLabel" destination="YuP-AT-HOY" id="1RU-l7-hEa"/>
                         <outlet property="table" destination="sRj-YZ-fxa" id="NK7-sJ-qLA"/>
                         <segue destination="BLF-7R-vpc" kind="relationship" relationship="nextPage" id="ZrI-Ib-aqx"/>
                     </connections>
@@ -95,12 +97,12 @@ RATE</string>
             </objects>
             <point key="canvasLocation" x="326" y="31"/>
         </scene>
-        <!--Habit Interface Controller-->
+        <!--Close-->
         <scene sceneID="LTS-xc-dJA">
             <objects>
-                <controller id="JOl-dP-sB9" customClass="HabitInterfaceController" customModule="WatchMe_WatchKit_App_Extension">
+                <controller title="Close" id="JOl-dP-sB9" customClass="HabitInterfaceController" customModule="WatchMe_WatchKit_App_Extension">
                     <items>
-                        <label width="45" alignment="center" textAlignment="center" numberOfLines="0" id="xD1-bZ-Fkq">
+                        <label alignment="center" textAlignment="center" numberOfLines="0" id="xD1-bZ-Fkq">
                             <string key="text">Long
 Name</string>
                             <fontDescription key="font" type="system" pointSize="17"/>

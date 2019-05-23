@@ -8,7 +8,7 @@
 
 import WatchKit
 
-class SummaryInterfaceController: WKInterfaceController {
+class SummaryInterfaceController: WKInterfaceController, PreparationController {
     @IBOutlet weak var completionRateLabel: WKInterfaceLabel!
     @IBOutlet weak var completedLabel: WKInterfaceLabel!
     @IBOutlet weak var startedLabel: WKInterfaceLabel!
@@ -18,9 +18,21 @@ class SummaryInterfaceController: WKInterfaceController {
 
     // MARK: - Interface Controller Lifecycle
 
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+
+        prepareController()
+    }
+    
     override func didAppear() {
         super.didAppear()
 
+        prepareController()
+    }
+
+    // MARK: - PreparationController
+
+    func prepareController() {
         loadData()
         populateViewsWithSummary()
     }

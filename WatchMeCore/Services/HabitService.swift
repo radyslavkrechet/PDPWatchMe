@@ -37,14 +37,20 @@ public struct HabitService {
         return weekday
     }
 
+    public static func setHabits(_ habits: [Habit]) {
+        let data = try! JSONEncoder().encode(habits)
+        Storage.defaults.set(data, forKey: habitsKey)
+    }
+
     public static func addHabit(withName name: String, goal: Int, weekdays: [WeekdayState]) {
-        let habit = Habit(name: name, goal: goal, weekdays: weekdays)
+        let id = UUID()
+        let habit = Habit(id: id, name: name, goal: goal, weekdays: weekdays)
         var habits = allHabits
         habits.insert(habit, at: 0)
         setHabits(habits)
 
         if weekdays[currentWeekday] == .select {
-            ActivityService.addActivity(forHabitWithId: habit.id)
+            ActivityService.addActivity(forHabitWithId: id)
         }
     }
 
@@ -56,10 +62,5 @@ public struct HabitService {
         if removedHabit.weekdays[currentWeekday] == .select {
             ActivityService.deleteActivity(forHabitWithId: removedHabit.id)
         }
-    }
-
-    private static func setHabits(_ habits: [Habit]) {
-        let data = try! JSONEncoder().encode(habits)
-        Storage.defaults.set(data, forKey: habitsKey)
     }
 }

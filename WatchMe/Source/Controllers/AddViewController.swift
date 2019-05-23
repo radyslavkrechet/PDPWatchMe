@@ -71,9 +71,8 @@ class AddViewController: UIViewController {
             return
         }
 
-        HabitService.addHabit(withName: name,
-                              goal: goalSegmentedControl.selectedSegmentIndex + 1,
-                              weekdays: weekdays)
+        let goal = goalSegmentedControl.selectedSegmentIndex + 1
+        HabitService.addHabit(withName: name, goal: goal, weekdays: weekdays)
 
         navigationController?.popViewController(animated: true)
     }

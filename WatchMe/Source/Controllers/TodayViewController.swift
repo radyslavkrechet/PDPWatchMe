@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TodayViewController: UIViewController, PreparationController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var completionRateLabel: UILabel!
     @IBOutlet weak var completedLabel: UILabel!
     @IBOutlet weak var startedLabel: UILabel!
@@ -21,25 +21,21 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // MARK: - View Controller Lifecycle
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        ActivityService.prepareActivities()
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         prepareController()
     }
 
-    // MARK: - Setup
+    // MARK: - PreparationControllerup
 
-    private func prepareController() {
+    func prepareController() {
         loadData()
         populateViewsWithSummary()
         tableView.reloadData()
     }
+
+    // MARK: - Setup
 
     private func loadData() {
         habits = HabitService.todayHabits
@@ -65,8 +61,9 @@ class TodayViewController: UIViewController, UITableViewDataSource, UITableViewD
         if let cell = cell as? TodayTableViewCell {
             let habit = habits[indexPath.row]
             let activity = activities[indexPath.row]
+            let rate = "\(SummaryService.rate(withGoal: habit.goal, done: activity.done))%"
             cell.nameLabel.text = habit.name
-            cell.rateLabel.text = "\(SummaryService.rate(withGoal: habit.goal, done: activity.done))%"
+            cell.rateLabel.text = rate
         }
         return cell
     }
